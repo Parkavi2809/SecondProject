@@ -8,7 +8,7 @@ public class StudentService {
         float clsavg =0;
         for(Student student:studentList)
         {
-           clsavg += student.calculateAverage();
+           clsavg += student.calculateAverage(); //calculate class averge
         }
         return clsavg/studentList.size();
     }
