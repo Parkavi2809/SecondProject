@@ -4,9 +4,9 @@ public class Student {
     public int studentId;
     public String name;
     public char Grade;
-    public int marks[] = new int[5];
+    public float marks[];
 
-    public Student(int studentId, String name, int[] marks) {
+    public Student(int studentId, String name, float[] marks) {
         this.studentId = studentId;
         this.name = name;
         //Grade = grade;
@@ -37,21 +37,21 @@ public class Student {
 //        Grade = grade;
 //    }
 
-    public int[] getMarks() {
+    public float[] getMarks() {
         return marks;
     }
 
-    public void setMarks(int[] marks) {
+    public void setMarks(float[] marks) {
         this.marks = marks;
     }
 
-    public double calculateAverage() {
-        int sum = 0, count = 0;
-        for (int i : marks) {
+    public float calculateAverage() {
+        float sum = 0, count = 0;
+        for (float i : marks) {
             sum += i;
             count++;
         }
-        double average = sum / (double) count;
+        float average = sum / count;
         return average;
     }
     public char calculateGrade() {
